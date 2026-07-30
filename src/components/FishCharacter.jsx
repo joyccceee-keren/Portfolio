@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 const fishColors = {
   coral: { body: '#ff6b6b', fin: '#ff5252', tail: '#ff8e8e' },
   cyan: { body: '#22d3ee', fin: '#06b6d4', tail: '#67e8f9' },
+  'cyan-300': { body: '#67e8f9', fin: '#22d3ee', tail: '#a5f3fc' },
+  'ocean-400': { body: '#3da5e0', fin: '#2a7fbf', tail: '#6bc5f0' },
   purple: { body: '#a78bfa', fin: '#8b5cf6', tail: '#c4b5fd' },
   gold: { body: '#fbbf24', fin: '#f59e0b', tail: '#fcd34d' },
   pink: { body: '#f472b6', fin: '#ec4899', tail: '#f9a8d4' },
