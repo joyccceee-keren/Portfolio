@@ -22,7 +22,7 @@ function Floor() {
       </mesh>
 
       {/* Vignette ring */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.49, 0]}>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.49, 0]} receiveShadow>
         <ringGeometry args={[4.0, 4.8, 48]} />
         <meshBasicMaterial
           color="#1a4a7a"
@@ -69,7 +69,7 @@ function Walls() {
 // ─── Rug (light blue) ───────────────────────────────────────────────
 function Rug() {
   return (
-    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.47, 0]}>
+    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.47, 0]} receiveShadow>
       <circleGeometry args={[2.0, 32]} />
       <meshStandardMaterial
         color="#1a4a7a"
@@ -99,11 +99,11 @@ function TrophyShelf({ onClick, onHover, onHoverEnd }) {
       </mesh>
 
       {/* Cabinet screen */}
-      <mesh position={[0, 0.7, 0.31]}>
+      <mesh position={[0, 0.7, 0.31]} castShadow>
         <planeGeometry args={[0.7, 0.5]} />
         <meshBasicMaterial color="#67e8f9" transparent opacity={0.3} />
       </mesh>
-      <mesh position={[0, 0.7, 0.32]}>
+      <mesh position={[0, 0.7, 0.32]} castShadow>
         <planeGeometry args={[0.75, 0.55]} />
         <meshBasicMaterial color="#06b6d4" transparent opacity={0.8} />
       </mesh>
@@ -126,7 +126,7 @@ function TrophyShelf({ onClick, onHover, onHoverEnd }) {
 
       {/* Buttons */}
       {[[0.1, 0.22, 0.15], [0.25, 0.22, 0.15]].map((pos, i) => (
-        <mesh key={i} position={pos}>
+        <mesh key={i} position={pos} castShadow>
           <cylinderGeometry args={[0.04, 0.04, 0.04]} />
           <meshStandardMaterial color="#67e8f9" roughness={0.3} metalness={0.2} />
         </mesh>
@@ -137,17 +137,17 @@ function TrophyShelf({ onClick, onHover, onHoverEnd }) {
         <cylinderGeometry args={[0.08, 0.12, 0.15]} />
         <meshStandardMaterial color="#fbbf24" roughness={0.2} metalness={0.7} />
       </mesh>
-      <mesh position={[0.2, 1.3, 0]}>
+      <mesh position={[0.2, 1.3, 0]} castShadow>
         <sphereGeometry args={[0.06]} />
         <meshStandardMaterial color="#fbbf24" roughness={0.2} metalness={0.7} />
       </mesh>
 
       {/* Decorative stripes */}
-      <mesh position={[0, 0.4, 0.31]}>
+      <mesh position={[0, 0.4, 0.31]} castShadow>
         <planeGeometry args={[0.5, 0.02]} />
         <meshBasicMaterial color="#ff6b6b" transparent opacity={0.7} />
       </mesh>
-      <mesh position={[0, 0.5, 0.31]}>
+      <mesh position={[0, 0.5, 0.31]} castShadow>
         <planeGeometry args={[0.5, 0.02]} />
         <meshBasicMaterial color="#67e8f9" transparent opacity={0.7} />
       </mesh>
@@ -180,21 +180,21 @@ function Easel({ onClick, onHover, onHoverEnd }) {
       </mesh>
 
       {/* Screen */}
-      <mesh position={[0, 0.7, 0.021]}>
+      <mesh position={[0, 0.7, 0.021]} castShadow>
         <planeGeometry args={[0.7, 0.8]} />
         <meshBasicMaterial color="#0f2847" />
       </mesh>
 
       {/* Colorful blobs on canvas */}
-      <mesh position={[-0.15, 0.8, 0.022]}>
+      <mesh position={[-0.15, 0.8, 0.022]} castShadow>
         <circleGeometry args={[0.12, 16]} />
         <meshBasicMaterial color="#22d3ee" transparent opacity={0.8} />
       </mesh>
-      <mesh position={[0.15, 0.65, 0.022]}>
+      <mesh position={[0.15, 0.65, 0.022]} castShadow>
         <circleGeometry args={[0.1, 16]} />
         <meshBasicMaterial color="#ff6b6b" transparent opacity={0.8} />
       </mesh>
-      <mesh position={[0, 0.5, 0.022]}>
+      <mesh position={[0, 0.5, 0.022]} castShadow>
         <circleGeometry args={[0.08, 16]} />
         <meshBasicMaterial color="#67e8f9" transparent opacity={0.7} />
       </mesh>
@@ -219,11 +219,11 @@ function Door({ onClick, onHover, onHoverEnd }) {
       </mesh>
 
       {/* Door panels */}
-      <mesh position={[0, 0.6, 0.05]}>
+      <mesh position={[0, 0.6, 0.05]} castShadow>
         <planeGeometry args={[0.8, 0.7]} />
         <meshStandardMaterial color="#0e7490" roughness={0.6} />
       </mesh>
-      <mesh position={[0, 1.4, 0.05]}>
+      <mesh position={[0, 1.4, 0.05]} castShadow>
         <planeGeometry args={[0.8, 0.7]} />
         <meshStandardMaterial color="#0e7490" roughness={0.6} />
       </mesh>
@@ -235,13 +235,13 @@ function Door({ onClick, onHover, onHoverEnd }) {
       </mesh>
 
       {/* Mail slot */}
-      <mesh position={[0, 1.7, 0.12]}>
+      <mesh position={[0, 1.7, 0.12]} castShadow>
         <boxGeometry args={[0.3, 0.05, 0.02]} />
         <meshStandardMaterial color="#67e8f9" roughness={0.4} metalness={0.3} />
       </mesh>
 
       {/* Envelope */}
-      <mesh position={[0, 1.73, 0.05]} rotation={[0, 0, 0.1]}>
+      <mesh position={[0, 1.73, 0.05]} rotation={[0, 0, 0.1]} castShadow>
         <planeGeometry args={[0.2, 0.15]} />
         <meshBasicMaterial color="#f0f8ff" />
       </mesh>
@@ -361,7 +361,7 @@ export default function HeroScene({
 
         <TrophyShelf
           onClick={() => handleObjectClick('Achievements')}
-          onHover={() => onMascotHint('click the trophy shelf to see my award!')}
+          onHover={() => onMascotHint('check out the trophy shelf!')}
           onHoverEnd={onClearHint}
         />
         <Easel
