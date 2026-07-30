@@ -1,16 +1,39 @@
-# React + Vite
+# Joyce Keren — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An interactive 3D portfolio website built with React, Three.js, and Framer Motion.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** — UI framework
+- **Vite 8** — Build tool
+- **React Three Fiber** — 3D scene rendering
+- **React Three Drei** — R3F utilities
+- **Framer Motion** — Animations & page transitions
+- **Tailwind CSS v4** — Styling
+- **React Router** — Multi-page routing
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🎮 Interactive 3D room scene with low-poly objects
+- 🐟 Animated fish characters swimming across pages
+- 👧 Cute guide mascot with speech bubble hints
+- 🌊 Ocean/water-themed color palette
+- 💻 Projects page with tech tags and GitHub links
+- 📬 Contact form with social links
+- 🎨 Smooth page transitions and animations
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```
